@@ -5,10 +5,11 @@ import Copy, { Size as CopySize } from "../../atoms/copy";
 import Headline, { Level, TextAlign } from "../../atoms/headline";
 
 export interface TeaserProps {
-	/** @name Copy text */ copyText: string;
-	/** @name Headline level */ headlineLevel: Level;
-	/** @name Headline align */ headlineAlign?: TextAlign;
-	/** @name Headline text */ headlineText: string;
+	/** @ignore */ foo?: string;
+	/** @name Copy Text */ copyText: string;
+	/** @name Headline Level */ headlineLevel: Level;
+	/** @name Headline Align */ headlineAlign?: TextAlign;
+	/** @name Headline Text */ headlineText: string;
 }
 
 const StyledHero = styled.div`
@@ -18,7 +19,7 @@ const StyledHero = styled.div`
 	text-align: center;
 `;
 
-const Teaser: React.StatelessComponent<TeaserProps> = (props): JSX.Element => {
+const Hero: React.StatelessComponent<TeaserProps> = (props): JSX.Element => {
 	return (
 		<StyledHero>
 			<Headline level={props.headlineLevel} textAlign={props.headlineAlign}>
@@ -29,4 +30,4 @@ const Teaser: React.StatelessComponent<TeaserProps> = (props): JSX.Element => {
 	);
 };
 
-export default Teaser;
+export default Hero;
